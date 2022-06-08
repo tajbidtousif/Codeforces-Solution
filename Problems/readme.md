@@ -1,1 +1,1 @@
-## This Repository is for Codeforces Contest/problems
+## This Repository is for Codeforces problems
