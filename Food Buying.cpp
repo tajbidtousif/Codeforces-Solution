@@ -3,32 +3,26 @@ using namespace std;
 
 int main()
 {
-    int tc;
-    cin >> tc;
+    long long int tc;
+    cin >> tc;N
 
-    while(tc--)
-    {
-        int s, ans = 0, temp = 0;
-        cin >> s;
-
-        while(s>=0)
-        {
-            if(s>9)
-            {
-                temp = (s-10) + 1;
-                ans+=10;
-            }
-
-            if(s<=9)
-            {
-                ans += s;
-                cout << ans << endl;
-                break;
+     while(tc --) {
+        int n;
+        cin >> n;
+        int count = 0;
+        while(n) {
+            if (n < 10) {
+                count += n;
+                n = 0;
+            } else {
+                int s = n / 10;
+                count += s * 10;
+                n %= 10;
+                n += s;
             }
         }
-
+        cout << count << endl;
     }
-
 
     return 0;
 }
